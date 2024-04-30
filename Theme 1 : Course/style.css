@@ -384,7 +384,7 @@ nav ul li a {
 .box .border {
     border: 5px solid #023047;
     border-radius: 24px;
-    margin: -13px 32px;
+    margin: -12px 32px;
 }
 
 .courses-bg button {
@@ -501,7 +501,7 @@ footer .submit-btn {
     padding: 32px 70px 70px 70px;
 }
 
-@media (min-width: 700px) and (max-width : 1024px) { 
+@media (min-width: 700px) and (max-width : 1024px) {
     .wrapper {
         padding: 100px 0;
     }
@@ -512,8 +512,13 @@ footer .submit-btn {
         top: 0;
     }
 
-    nav.scrolled{ 
+    nav.scrolled {
         width: 100%;
+    }
+
+    .hero-section {
+        display: block;
+        padding: 100px;
     }
 
     .btn {
@@ -521,20 +526,24 @@ footer .submit-btn {
     }
 
     .testimonials {
-        display: block;
+        display: flex;
         padding: 100px;
         padding-bottom: 0px;
+        flex-direction: column-reverse;
+        padding-top: 0px;
     }
 
     .testimonials .left {
         width: 100%;
+        margin-top: 55px;
     }
 
     .testimonials .right {
         width: 100%;
         padding-bottom: 0px;
+        padding-top: 0px;
     }
-    
+
     .testimonials .card {
         width: 100%;
         position: static;
@@ -543,6 +552,11 @@ footer .submit-btn {
     .testimonials .border {
         position: absolute;
         left: 187px;
+        top: 235px;
+    }
+
+    .testimonials .btn {
+        float: right;
     }
 
     .courses .boxes {
@@ -579,5 +593,117 @@ footer .submit-btn {
 
     .copyright {
         padding-bottom: 0px;
+    }
+}
+
+
+@media (max-width : 500px) {
+    .wrapper {
+        padding: 0px 32px;
+    }
+
+    .get-app .boxes {
+        display: block;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    .courses .boxes {
+        display: block;
+    }
+
+    .courses .box {
+        width: auto;
+        height: 380px;
+    }
+
+    .box .content-img img {
+        width: 349px;
+    }
+
+    .box .content h3 {
+        font-size: 24px;
+    }
+
+    .box .border {
+        margin: 48px 32px;
+    }
+
+    .box2 {
+        margin-top: 60px;
+    }
+
+    .btn {
+        padding: 10px 32px;
+    }
+
+    .boxes {
+        margin: 0px -22px;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card.men {
+        position: static;
+    }
+
+    .testimonials .left {
+        width: 100%;
+    }
+
+    .testimonials .right {
+        width: 100%;
+    }
+
+    .testimonials .card {
+        width: auto;
+    }
+
+    .testimonials .card .card-header h3 {
+        font-size: 18px;
+    }
+
+    .testimonials .border {
+        left: 83px;
+        bottom: 35px;
+        top: auto;
+    }
+
+    footer .links {
+        display: block;
+        text-align: center;
+    }
+
+    .links ul {
+        margin-bottom: 40px;
+        margin-left: -30px;
+    }
+
+    .social-links {
+        display: block;
+    }
+
+    .social-links img {
+        padding: 10px
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    footer .submit-btn {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+    }
+
+    footer input {
+        padding: 10px;
+        margin-top: -10px;
     }
 }
