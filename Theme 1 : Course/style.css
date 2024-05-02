@@ -609,7 +609,8 @@ footer .submit-btn {
     .testimonials .border {
         position: absolute;
         left: 187px;
-        top: 235px;
+        top: unset;
+        bottom: -60px;
     }
 
     .testimonials .btn {
