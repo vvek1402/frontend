@@ -521,9 +521,61 @@ footer .submit-btn {
         width: 100%;
     }
 
+    header .wrapper {
+        padding-bottom: 0px !important;
+    }
+
     .hero-section {
+        max-height: 1100px;
         display: block;
         padding: 100px;
+        flex-direction: column;
+        padding-bottom: 0px;
+    }
+
+    .hero-section .left {
+        margin-top: 58px;
+    }
+
+    .hero-section .right {
+        right: 0;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        transform: translateX(5px);
+    }
+
+    .hero-section .right img {
+        height: 550px;
+        transform: translateX(10px);
+      }
+
+    .achievement-card {
+        position: absolute;
+    }
+
+    .achievement-card .bg {
+        background: transparent;
+    }
+
+
+    .achievement-card.students-enrolled {
+        margin-bottom: 57px;
+        min-width: 206px;
+        left: unset;
+        top: unset;
+        bottom: 240px;
+    }
+
+    .achievement-card.overall-rating {
+        min-width: 188px;
+        left: unset;
+        top: unset;
+        bottom: 120px;
+    }
+
+    .hero-section .left p {
+        width: auto;
     }
 
     .btn {
@@ -655,7 +707,7 @@ footer .submit-btn {
     .mobile-menu-container .close-icon {
         position: fixed;
         top: 32px;
-        right: 100px;
+        right: 30px;
         opacity: 0;
         pointer-events: none;
         transition: all 400ms ease;
@@ -698,7 +750,14 @@ footer .submit-btn {
         right: 0;
         position: absolute;
         bottom: 0;
+        overflow: hidden;
+        transform: translateX(30px);
     }
+
+    .hero-section .right img {
+        height: 400px;
+        transform: translateX(50px);
+      }
 
     .achievement-card {
         position: absolute;
@@ -708,21 +767,20 @@ footer .submit-btn {
         background: transparent;
     }
 
-    .hero-section .right img {
-        height: 399px;
-    }
 
     .achievement-card.students-enrolled {
         margin-bottom: 57px;
-        width: 182px;
+        min-width: 182px;
         left: 0;
-        top: 622px;
+        bottom: 190px;
+        top: auto;
     }
 
     .achievement-card.overall-rating {
-        width: 172px;
+        min-width: 172px;
         left: 0;
-        top: 754px;
+        bottom: 62px;
+        top: auto;
     }
 
     .hero-section .left p {
