@@ -29,6 +29,10 @@ a, p {
     font-weight: 600;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*Navbar start */
 .navbar {
   padding: 25px 50px;
@@ -48,7 +52,9 @@ a, p {
 ::placeholder {
   color: #c5c5c5;
   font-size: 20px;
+  padding: 10px;
   padding-left: 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar .search-section {
@@ -128,6 +134,7 @@ ul li {
   padding: 12px 8px;
   border-radius: 4px;
   font-weight: 600;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 39%);
 }
 
 .profile-section {
@@ -175,6 +182,7 @@ main {
   margin-left: 350px;
   width: calc(100% - 350px);
   padding-right: 50px;
+  padding-bottom: 50px;
 }
 
 .card {
@@ -245,4 +253,135 @@ main {
 
 .light-green {
   color:#47FF5A;
+}
+
+.revenue-chart-card {
+  height: 366px;
+  grid-column: span 2;
+}
+
+.expense-chart-card {
+  height: 366px;
+}
+
+.lowercase {
+  text-transform: capitalize !important;
+}
+
+#DoughnutChart, #lineChart {
+  max-height: 250px;
+}
+
+.badge {
+  background: rgba(100, 227, 56, 32%);
+  border-radius: 10px;
+  color : #2E9A09;
+  padding: 6px;
+}
+
+.filter ul {
+  display: flex;
+  color: rgba(0, 0, 0, 50%);
+  gap: 34px;
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+
+.filter ul li {
+  margin: 0px;
+  padding: 6px;
+}
+
+.filter ul li.active {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.tracking-search {
+  padding: 16px;
+  width: 250px;
+  border-radius: 16px;
+  border: 1px solid #cfcfcf;
+  background: #D9D9D9;
+  height: 20px;
+}
+
+.tracking-search::placeholder {
+  color: rgba(0, 0, 0, 50%);
+  padding-left: 0px;
+}
+
+.vehicle-tracking {
+  grid-column: span 2;
+  height: 270px;
+}
+
+.vehicle-tracking img {
+  width: 100%;
+  height: 100%;
+}
+
+.vehicle-tracking .card-title .content {
+  display: block;
+  position: relative;
+}
+
+.vehicle-tracking .vehicle-search-icon {
+  top: 2px;
+  left: 212px;
+  position: absolute;
+}
+
+.vehicle-tracking .vehicle-search-icon img {
+  width: 30px;
+}
+
+.vehicle-table {
+  height: 270px;
+}
+
+table {
+  width: 100%;
+  
+}
+
+thead th {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 39%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+tbody {
+  text-align: center;
+}
+
+tbody td {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 57%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 235%;
+}
+
+.blue {
+  color: #167EFB;
+}
+
+table .active:before {
+  content: url('/image/fleet.svg');
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+table .inactive:before {
+  content: url('/image/inactive.svg');
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
 }

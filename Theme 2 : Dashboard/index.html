@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,32 +24,32 @@
                 <h3 class="small-title">Menu</h3>
                 <ul>
                     <li>
-                        <a href="" class="menu-item active"><img src="/image/overview.svg" alt="Overview" />
+                        <a href="#" class="menu-item active"><img src="/image/overview.svg" alt="Overview" />
                             Overview
                         </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/analytics.svg" alt="Analytics" /> Analytics
+                        <a href="#" class="menu-item"> <img src="/image/analytics.svg" alt="Analytics" /> Analytics
                         </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/reports.svg" alt="Reports" /> Reports </a>
+                        <a href="#" class="menu-item"> <img src="/image/reports.svg" alt="Reports" /> Reports </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/transport.svg" alt="Trucks" /> Trucks </a>
+                        <a href="#" class="menu-item"> <img src="/image/transport.svg" alt="Trucks" /> Trucks </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/workers.svg" alt="Workers" /> Workers </a>
+                        <a href="#" class="menu-item"> <img src="/image/workers.svg" alt="Workers" /> Workers </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/send.svg" alt="Contact" /> Contact </a>
+                        <a href="#" class="menu-item"> <img src="/image/send.svg" alt="Contact" /> Contact </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/notifications-menu.svg" alt="Notification" />
+                        <a href="#" class="menu-item"> <img src="/image/notifications-menu.svg" alt="Notification" />
                             Notification </a>
                     </li>
                     <li>
-                        <a href="" class="menu-item"> <img src="/image/settings.svg" alt="Settings" /> Settings </a>
+                        <a href="#" class="menu-item"> <img src="/image/settings.svg" alt="Settings" /> Settings </a>
                     </li>
                 </ul>
             </div>
@@ -146,8 +145,125 @@
                     </div>
                 </div>
             </div>
+            <div class="card revenue-chart-card">
+                <div class="card-title">
+                    <div class="content">
+                        <div class="title">
+                            <h3 class="lowercase"> Your Revenue</h3>
+                            <div class="badge"><img src="/image/revenue.svg" alt="Revenue" /> 13% growth</div>
+                        </div>
+                        <div class="filter">
+                            <ul>
+                                <li>1D</li>
+                                <li>1W</li>
+                                <li class="active">1M</li>
+                                <li>6M</li>
+                                <li>1Y</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card expense-chart-card">
+                <div class="card-title">
+                    <div class="content">
+                        <div class="title ">
+                            <h3 class="lowercase"> Total Expenses</h3>
+                        </div>
+                        <button class="menu-btn"><img src="/image/card-icon-menu.svg" alt="menu icon" /></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <canvas id="DoughnutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card vehicle-tracking">
+                <div class="card-title">
+                    <div class="content">
+                        <a href="#" class="vehicle-search-icon"><img src="/image/search.svg" alt="search" /></a>
+                        <input type="text" placeholder="Vehicle Tracking" class="tracking-search">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <img src="/image/vehicle-tracking.png" alt="vehicle tracking" />
+                </div>
+            </div>
+            <div class="card vehicle-table">
+                <div class="card-title">
+                    <div class="content">
+                        <div class="title ">
+                            <h3 class="lowercase"> Vehicle Status</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Vehicle Type</th>
+                                <th>Reg Plate.</th>
+                                <th>Status</th>
+                                <th>Live view</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Car 
+                                </td>
+                                <td>
+                                    DC2312  
+                                </td>
+                                <td class="active">
+                                    ACTIVE  
+                                </td>
+                                <td class="blue">
+                                    TRACK 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Truck 
+                                </td>
+                                <td>
+                                    BA4678  
+                                </td>
+                                <td class="inactive">
+                                    INACTIVE  
+                                </td>
+                                <td class="blue">
+                                    TRACK 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Jeep 
+                                </td>
+                                <td>
+                                    CC8909  
+                                </td>
+                                <td class="active">
+                                    ACTIVE  
+                                </td>
+                                <td class="blue">
+                                    TRACK 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
