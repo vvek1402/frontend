@@ -396,7 +396,7 @@ tbody td {
 }
 
 table .active:before {
-  content: url('/image/fleet.svg');
+  content: url('image/fleet.svg');
   display: inline-block;
   padding-right: 3px;
   vertical-align: middle;
@@ -404,7 +404,7 @@ table .active:before {
 }
 
 table .inactive:before {
-  content: url('/image/inactive.svg');
+  content: url('image/inactive.svg');
   display: inline-block;
   padding-right: 3px;
   vertical-align: middle;
