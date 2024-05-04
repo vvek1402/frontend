@@ -367,10 +367,6 @@ main {
   width: 30px;
 }
 
-.vehicle-table {
-  height: 270px;
-}
-
 table {
   width: 100%;
 
@@ -456,7 +452,7 @@ table .inactive:before {
 
   main {
     transition: 0.3s ease;
-    margin: 50px;
+    margin-left: 50px;
   }
 
   .navbar .search {
@@ -471,5 +467,36 @@ table .inactive:before {
 
   .expense-chart-card, .vehicle-table, .service-card {
     grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .cards {
+    display: block;
+  }
+
+  .search-input{
+    display: none !important;
+  }
+
+  main {
+    transition: 0.3s ease;
+    margin-left: 10%;
+  }
+
+  .card {
+    height: 100%;
+    margin: 20px 0px;
+    min-width: 340px;
+  }
+
+  .revenue-chart-card .card-title .content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar .search-form {
+    gap: 10px;
   }
 }
