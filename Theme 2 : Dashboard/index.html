@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +34,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="menu-item"> <img src="/image/reports.svg" alt="Reports" /> Reports </a>
+                        <a href="#" class="menu-item indicator">
+                            <div> <img src="/image/reports.svg" alt="Reports" /> Reports</div>
+                            <span>32</span>
+                        </a>
                     </li>
                     <li>
                         <a href="#" class="menu-item"> <img src="/image/transport.svg" alt="Trucks" /> Trucks </a>
@@ -45,8 +49,10 @@
                         <a href="#" class="menu-item"> <img src="/image/send.svg" alt="Contact" /> Contact </a>
                     </li>
                     <li>
-                        <a href="#" class="menu-item"> <img src="/image/notifications-menu.svg" alt="Notification" />
-                            Notification </a>
+                        <a href="#" class="menu-item indicator">
+                            <div> <img src="/image/notifications-menu.svg" alt="Notification" /> Notification</div>
+                            <span>10</span>
+                        </a>
                     </li>
                     <li>
                         <a href="#" class="menu-item"> <img src="/image/settings.svg" alt="Settings" /> Settings </a>
@@ -71,9 +77,12 @@
         </div>
         <nav class="navbar">
             <div class="search-section">
-                <h1>Dashboard</h1>
+                <div class="mobile-menu-open">
+                    <button class="ham-icon"><img src="/image/hamburger-menu-mobile.svg" alt="mobile-menu" /></button>
+                    <h1>Dashboard</h1>
+                </div>
                 <div class="search-form">
-                    <div class="search-form">
+                    <div class="search-input">
                         <a href="#" class="search-icon"><img src="/image/search.svg" alt="search" /></a>
                         <input class="search" type="text" placeholder="Search.." />
                         <a href="#" class="close-icon"><img src="/image/close.svg" class="" alt="Close" /></a>
@@ -88,7 +97,7 @@
             </div>
         </nav>
     </div>
-    <main>
+    <main id="main">
         <div class="cards">
             <div class="card">
                 <div class="card-title">
@@ -211,49 +220,49 @@
                                 <th>Reg Plate.</th>
                                 <th>Status</th>
                                 <th>Live view</th>
-                              </tr>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    Car 
+                                    Car
                                 </td>
                                 <td>
-                                    DC2312  
+                                    DC2312
                                 </td>
                                 <td class="active">
-                                    ACTIVE  
+                                    ACTIVE
                                 </td>
                                 <td class="blue">
-                                    TRACK 
+                                    TRACK
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Truck 
+                                    Truck
                                 </td>
                                 <td>
-                                    BA4678  
+                                    BA4678
                                 </td>
                                 <td class="inactive">
-                                    INACTIVE  
+                                    INACTIVE
                                 </td>
                                 <td class="blue">
-                                    TRACK 
+                                    TRACK
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Jeep 
+                                    Jeep
                                 </td>
                                 <td>
-                                    CC8909  
+                                    CC8909
                                 </td>
                                 <td class="active">
-                                    ACTIVE  
+                                    ACTIVE
                                 </td>
                                 <td class="blue">
-                                    TRACK 
+                                    TRACK
                                 </td>
                             </tr>
                         </tbody>

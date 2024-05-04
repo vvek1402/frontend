@@ -37,3 +37,21 @@ let lineChart = new Chart(linectx, {
   type: "line",
   data: data
 });
+
+
+const menuIcon = document.querySelector(".ham-icon");
+const sidebar = document.querySelector(".sidebar");
+const main = document.getElementById("main");
+
+menuIcon.addEventListener("click", (event) => {
+  event.stopPropagation(); 
+  sidebar.classList.toggle("active");
+  main.classList.toggle("active");
+});
+
+document.addEventListener("click", () => {
+  if (sidebar.classList.contains("active")) {
+    sidebar.classList.remove("active");
+    main.classList.remove("active");
+  }
+});

@@ -1,6 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*:before,
+*:after {
+  margin: 0pt;
+  padding: 0pt;
   box-sizing: border-box;
 }
 
@@ -15,18 +17,19 @@ h1 {
   font-family: "Poppins", sans-serif;
 }
 
-a, p {
+a,
+p {
   font-size: 16px;
 }
 
 .btn {
-    background-color: #167EFB;
-    padding: 10px 12px;
-    width: 250px;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
+  background-color: #167EFB;
+  padding: 10px 12px;
+  width: 250px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 button {
@@ -70,6 +73,10 @@ button {
   gap: 28px;
 }
 
+.navbar .search-input {
+  position: relative;
+}
+
 .navbar .close-icon {
   top: 14px;
   right: 15px;
@@ -81,6 +88,7 @@ button {
   left: 6px;
   position: absolute;
 }
+
 /*Navbar End */
 
 /*Sidebar Start */
@@ -98,17 +106,17 @@ button {
 }
 
 .small-title {
-    font-size: 16px;
-    color: #64748B;
+  font-size: 16px;
+  color: #64748B;
 }
 
 .menus {
-    margin: 24px;
-    border-bottom: 1px solid #c5c5c5;
+  margin: 24px;
+  border-bottom: 1px solid #c5c5c5;
 }
 
 .menus .btn {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 ul {
@@ -135,6 +143,24 @@ ul li {
   border-radius: 4px;
   font-weight: 600;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 39%);
+}
+
+.indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indicator div {
+  display: flex;
+  gap: 10px;
+}
+
+.indicator span {
+  padding: 0px 8px;
+  background: #167EFB;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .profile-section {
@@ -186,7 +212,7 @@ main {
 }
 
 .card {
-  height: 200px;
+  height: auto;
   border-radius: 30px;
   min-width: 315px;
   border: 1px solid rgba(0, 0, 0, 15%);
@@ -219,7 +245,7 @@ main {
 }
 
 .card-body {
-  margin: 27px 0px;
+  margin-top: 27px;
 }
 
 .card-body h3 {
@@ -252,7 +278,7 @@ main {
 }
 
 .light-green {
-  color:#47FF5A;
+  color: #47FF5A;
 }
 
 .revenue-chart-card {
@@ -268,14 +294,15 @@ main {
   text-transform: capitalize !important;
 }
 
-#DoughnutChart, #lineChart {
+#DoughnutChart,
+#lineChart {
   max-height: 250px;
 }
 
 .badge {
   background: rgba(100, 227, 56, 32%);
   border-radius: 10px;
-  color : #2E9A09;
+  color: #2E9A09;
   padding: 6px;
 }
 
@@ -346,7 +373,7 @@ main {
 
 table {
   width: 100%;
-  
+
 }
 
 thead th {
@@ -386,4 +413,63 @@ table .inactive:before {
   padding-right: 3px;
   vertical-align: middle;
   font-weight: 900;
+}
+
+/* Main End */
+
+.mobile-menu-open {
+  display: flex;
+  gap: 10px;
+}
+
+.ham-icon {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.ham-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 1024px) {
+
+  /* Mobile Menu Started */
+
+  .ham-icon {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: block;
+    transition: 0.3s ease;
+    background: #fff;
+    z-index: 111;
+    height: 100vh;
+    position: fixed;
+  }
+
+  main {
+    transition: 0.3s ease;
+    margin: 50px;
+  }
+
+  .navbar .search {
+    width: auto;
+  }
+
+  /* Mobile Menu End */
+
+  .cards {
+    grid-template-columns: auto;
+  }
+
+  .expense-chart-card, .vehicle-table, .service-card {
+    grid-column: span 2;
+  }
 }
