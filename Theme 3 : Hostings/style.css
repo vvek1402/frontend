@@ -306,8 +306,10 @@ nav {
 
 .pricing .cards {
     margin-top: 85px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .pricing .card {
@@ -459,6 +461,107 @@ nav {
 /* radio switch */
 
 
+/* testimonials */
+
+.testimonials {
+    margin-bottom: 84px;
+    position: relative;
+}
+
+.testimonials .testimonial-header h1 {
+    font-size: 48px;
+    line-height: 64px;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 800;
+    position: relative;
+    padding-left: 95px;
+    padding-top: 56px;
+}
+
+.testimonials .testimonial-header h1::before {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    content: '';
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-image: url("/images/QuoteMark.svg");
+    background-size: 150px;
+    background-repeat: no-repeat;
+} 
+
+.testimonials .testimonial-header .header-text {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: var(--font-inter), sans-serif;
+    padding-left: 95px;
+}
+
+.testimonials .testimonial-header {
+    display: flex;
+    gap: 60px;
+}
+
+.testimonials .card-1 {
+    margin-top: 106px;
+}
+
+.testimonials .card-2 {
+    position: absolute;
+    top: 252px;
+    height: 470px;
+    width: 350px;
+    left: 185px;
+}
+
+.testimonials .card-3 {
+    margin-top: 32px;
+    width: 350px
+}
+
+.testimonials .card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(41, 41, 42, 7%);
+    max-width: 445px;
+    padding: 32px;
+    padding-left: 64px;
+}
+
+.testimonials .card .testimonial-text::before {
+    content: url("/images/QuoteMarkGreen.svg");
+    position: absolute;
+    left: -30px;
+    top: -10px;
+}
+
+.testimonials .card .testimonial-text {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.testimonials .card .user h2 {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #18191F;
+}
+
+.testimonials .card .user p {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #969BAB;
+}
+
 /* Our users */
 
 .our-users .right {
@@ -469,7 +572,6 @@ nav {
 
 .banner {
     background-color: #F7FAFE;
-    height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -485,12 +587,14 @@ nav {
     font-weight: var(--semi-bold);
     line-height: 88px;
     font-family: var(--font-poppins), sans-serif;
+    padding: 40px 90px;
+    padding-top: 90px;
 }
 
 .banner .btn {
     display: flex;
     box-shadow: none;
-    margin-top: 40px;
+    margin-bottom: 90px;
     width: auto;
     align-items: center;
     gap: 4px;
@@ -580,7 +684,7 @@ footer .texts {
         margin-top: 100px;
     }
 
-    .hero-section .hero-section-img {
+    .hero-section .banner-img{
         margin-right: 0;
         width: 100%;
     }
@@ -597,6 +701,39 @@ footer .texts {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .pricing .cards {
+        justify-content: center;
+    }
+
+    .footer-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .testimonials .testimonial-header {
+        display: block;
+    }
+
+    .testimonials {
+        position: unset;
+    }
+
+    .testimonials .card-3, .testimonials .card-2 {
+        width: auto;
+    }
+
+    .testimonials .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials .card-2 {
+        position: unset;
+        margin-top: 32px;
+    }
+
 }
 
 @media (max-width : 699px) {
@@ -617,7 +754,7 @@ footer .texts {
         margin-top: 100px;
     }
 
-    .hero-section .hero-section-img {
+    .hero-section .banner-img {
         margin-right: 0;
         width: 100%;
     }
@@ -650,5 +787,74 @@ footer .texts {
     .features {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+
+    .pricing .pricing-header h1 {
+        font-size: 25px;
+        line-height: normal;
+    }
+
+    .pricing .tabs .nav-tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .radio-group .radio {
+        flex-direction: column;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .pricing .tabs .nav-tabs li a {
+        padding: 10px 30%;
+    }
+
+    .footer-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 40px;
+        padding: 40px 0px;
+    }
+
+    .testimonials .testimonial-header {
+        display: block;
+    }
+
+    .testimonials {
+        position: unset;
+    }
+
+    .testimonials .card-3, .testimonials .card-2 {
+        width: auto;
+    }
+
+    .testimonials .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials .card-2 {
+        position: unset;
+        margin-top: 32px;
+        height: auto;
+    }
+
+    .testimonials .testimonial-header h1 {
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .testimonials .card-1 {
+        margin-top: 50px;
+    }
+
+    .testimonials .testimonial-header h1::before {
+        background-size: 130px;
     }
 }
