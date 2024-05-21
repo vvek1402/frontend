@@ -45,11 +45,36 @@ a {
     border: 1px solid #000000;
 }
 
-nav {
+.container-header {
+    max-width: 1134px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.navbar {
     display: flex;
     margin: 42px 0px;
     justify-items: center;
     align-items: center;
+    width: 1134px;
+}
+
+nav.scrolled {
+    top: 0;
+    z-index: 111;
+    position: fixed;
+    margin: 0 !important;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(41, 41, 42, 7%);
+}
+
+nav.scrolled .navbar {
+    margin: 10px;
+}
+
+.mobile-nav, .mobile-menu-container {
+    display: none;
 }
 
 .header ul {
@@ -666,9 +691,75 @@ footer .texts {
     padding-bottom: 80px;
 }
 
+/*mobile menu */
+
+
+.mobile-menu-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--color-theme-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11111;
+    transition: all 400ms ease;
+}
+
+.mobile-menu-container.active {
+    left: 0;
+}
+
+.mobile-menu-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+}
+
+.mobile-menu-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu-container ul li {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.mobile-menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--font-poppins), sans-serif;
+    font-weight: var(--semi-bold);
+}
+
+
 @media (min-width : 700px) and (max-width : 1024px) {
     .header {
         display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        background: #ffffff;
+        z-index: 11;
+        width: 100%;
     }
 
     .container,
@@ -678,6 +769,7 @@ footer .texts {
 
     .hero-section {
         display: block;
+        margin-top: 150px;
     }
 
     .hero-section .right {
@@ -741,6 +833,18 @@ footer .texts {
         display: none;
     }
 
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        background: #ffffff;
+        z-index: 11;
+        width: 100%;
+    }
+
     .container,
     .service-container {
         margin: 0 50px;
@@ -748,6 +852,7 @@ footer .texts {
 
     .hero-section {
         display: block;
+        margin-top: 125px;
     }
 
     .hero-section .right {
